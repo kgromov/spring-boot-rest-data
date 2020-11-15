@@ -1,1 +1,1 @@
-# Spring Boot Template Application build with Maven
+Spring boot REST Data project - @RestControllers with sort/search/pagination is out of the box 
