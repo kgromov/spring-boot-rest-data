@@ -8,5 +8,5 @@ import org.springframework.data.repository.CrudRepository;
  * Created by jt on 6/13/17.
  */
 //@RepositoryRestResource(collectionResourceRel = "recipes", path = "recipes")
-public interface RecipeRepository extends CrudRepository<Recipe, Long> {
+public interface RecipeRepository extends JpaRepository<Recipe, Long> {
 }
