@@ -11,6 +11,7 @@ import java.util.Optional;
  */
 // search is working out of the box by method name and parameters:
 // e.g. categories/search/findByDescription?description=American
+// NOTE: works only explicitly defined methods, CrudRepository interface methods does not work in search
 // also page, size, sort are out of the box for PagingAndSortingRepository inherited repositories
 // sort works in the following way: ?sort=<fieldName1>,ASC|DESC[&sort=<fieldName2>,ASC|DESC]
 public interface CategoryRepository extends JpaRepository<Category, Long> {
