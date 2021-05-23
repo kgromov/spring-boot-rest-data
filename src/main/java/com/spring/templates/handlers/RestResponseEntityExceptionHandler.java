@@ -25,8 +25,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
                 .map(ObjectError::toString)
                 .collect(Collectors.joining("\n"));
 
-        return new ResponseEntity<>(errors, new HttpHeaders(),
-                HttpStatus.PARTIAL_CONTENT);
+        return new ResponseEntity<>(errors, new HttpHeaders(), HttpStatus.PARTIAL_CONTENT);
     }
 
     @ExceptionHandler({ConstraintViolationException.class})
@@ -37,7 +36,6 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
                 .map(ConstraintViolation::getMessage)
                 .collect(Collectors.joining("\n"));
 
-        return new ResponseEntity<Object>(errors, new HttpHeaders(),
-                HttpStatus.PARTIAL_CONTENT);
+        return new ResponseEntity<>(errors, new HttpHeaders(), HttpStatus.PARTIAL_CONTENT);
     }
 }
